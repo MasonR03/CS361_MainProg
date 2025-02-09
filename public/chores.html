@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Chores</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      
+      <h1 style="padding-bottom: 10px;">Chore Tracker</h1>
+      <!-- This div will be populated with the logged-in user's info -->
+      <div id="user-info" style="padding-bottom: 10px;"></div>
+      <a href="/logout" id="logout-link">Logout</a>  
+    </header>
+    
+    <div class="container">
+      <h2>Chores</h2>
+      <p>
+        <!--<a href="/">Home</a>-->
+      </p>
+      
+      <!-- Container for chore list -->
+      <div id="chore-list"></div>
+      
+      <!-- Organizer-only chore creation section -->
+      <div id="create-chore-container" style="padding-top: 60px;">
+        <h3>Create a New Chore (Organizer Only)</h3>
+        <form id="create-chore-form">
+          <label for="title">Title:</label>
+          <input type="text" name="title" id="title" required />
+          
+          <label for="assignedTo">Assigned To:</label>
+          <input type="text" name="assignedTo" id="assignedTo" required />
+          
+          <button type="submit">Create Chore</button>
+        </form>
+      </div>
+    </div>
+    
+    <footer>
+        <p>Mason Rauschkolb CS361 Winter 2025</p>
+    </footer>
+    
+    <script src="/js/chores.js"></script>
+  </body>
+</html>

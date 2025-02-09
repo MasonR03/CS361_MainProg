@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Chore Tracker</h1>
+      <h2 style="color: rgb(199, 59, 59);">Please Log In to Continue</h2>
+    </header>
+    
+    <div class="container">
+      <h2>Login</h2>
+      <form action="/login" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required />
+        
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required />
+        
+        <button type="submit" style="font-size: large; margin-bottom: 20px;">Login</button>
+      </form>
+      <!-- <p><a href="/">Back to Home</a></p> -->
+       <p><a href="/register.html">Register</a></p>
+    </div>
+    
+    <footer>
+        <p>Mason Rauschkolb CS361 Winter 2025</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+/* public/css/styles.css */
+
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #e0f7fa; /* lighter cyan */
+    margin: 0;
+    padding: 0;
+    color: #006064; /* dark cyan */
+}
+  
+/* Container for centering content */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+  
+/* Header and Footer */
+header, footer {
+    background: #004d40; /* dark teal */
+    color: #e0f2f1;   /* light teal */
+    padding: 1rem 0;
+    text-align: center;
+}
+  
+header h1, footer p {
+    margin: 0;
+}
+  
+/* Headings */
+h1, h2 {
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+  
+/* Links */
+a {
+    color: #00897b;   /* teal */
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* make the links look clickable and button like*/
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    background: #e0f2f1; /* light teal */
+    font-size: large;
+}
+
+#logout-link{
+    background-color: rgb(255, 117, 117);
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    /* change the background color on hover */
+    background: #b2dfdb;
+}
+  
+/* Forms */
+form {
+    margin: 1rem 0;
+}
+  
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+  
+form input[type="text"],
+form input[type="password"],
+form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #b2dfdb;
+    border-radius: 4px;
+}
+  
+form button,
+form input[type="submit"] {
+    background: #00897b;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+form button:hover,
+form input[type="submit"]:hover {
+    background: #00695c;
+}
+  
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+  
+table, th, td {
+    border: 1px solid #b2dfdb;
+}
+  
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+}
+  
+@media (max-width: 600px) {
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
