@@ -65,25 +65,30 @@ function getUserInfo() {
     if (createForm) {
       createForm.addEventListener("submit", (e) => {
         e.preventDefault();
+        // Ask for confirmation before creating the chore
+        const confirmed = confirm("Are you sure you want to create this chore?");
+        if (!confirmed) {
+          return;
+        }
         const formData = new FormData(createForm);
         // Convert FormData to URLSearchParams so our server can parse it
         const searchParams = new URLSearchParams(formData);
-  
+      
         fetch("/api/chores", {
           method: "POST",
           body: searchParams,
         })
           .then((res) => res.json())
           .then((data) => {
-            if (data.error) {
-              alert("Error: " + data.error);
-            } else {
-              alert("Chore created!");
-              window.location.reload(); // Simple way to refresh chores list
-            }
+        if (data.error) {
+          alert("Error: " + data.error);
+        } else {
+          alert("Chore created!");
+          window.location.reload(); // Simple way to refresh chores list
+        }
           })
           .catch((err) => {
-            console.error("Error creating chore:", err);
+        console.error("Error creating chore:", err);
           });
       });
     }
